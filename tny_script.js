@@ -20,4 +20,10 @@ document.getElementById("hrs").textContent = "hh";
 document.getElementById("mins").textContent = "mm";
 document.getElementById("secs").textContent = "ss";
 
-window.alert("Welcome to Tulsa");
+/*Store the current date and time */
+var currentDay = new Date("May 23, 2018 14:35:05");
+var dateStr = currentDay.toLocaleDateString();
+var timeStr = currentDaygot.toLocaleTimeString();
+
+/*Display the current date and time*/
+document.getElementById("dateNow").innerHTML = dateStr + "<br />" + timeStr;
