@@ -34,5 +34,17 @@ var nextYear = currentDay.getFullYear() + 1;
 newYear.setFullYear(nextYear);
 var daysLeft = (newYear - currentDay)/(1000*60*60*24);
 
+/*Calculate the hours left in the day*/
+var hrsLeft = (daysLeft - Math.floor(daysLeft))*24;
+
+/*Calculate the minutes and seconds left in the day*/
+var minsLeft = (hrsLeft - Math.floor(hrsLeft))*60;
+var secsLeft = (minsLeft - Math.floor(minsLeft))*60;
+
 /*Display the time until New Year's Eve*/
 document.getElementById("days").textContent = Math.floor(daysLeft); 
+document.getElementById("hrs").textContent = Math.floor(hrsLeft); 
+document.getElementById("mins").textContent = Math.floor(minsLeft); 
+document.getElementById("secs").textContent = Math.floor(secsLeft); 
+
+
